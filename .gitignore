@@ -1,0 +1,9 @@
+doc/
+theory/
+*.class
+.project
+.settings/
+
+output.txt
+
+*.backup
