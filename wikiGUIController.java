@@ -234,4 +234,30 @@ public class wikiGUIController {
 
 		return strResponse;
 	}
+
+	/**
+	 * Interprets best picture count end point
+	 * 
+	 * @return Number of films nominated for Best Picture
+	 */
+	public String bestPictureCount() {
+		String count = this.info.getBestPictureCount();
+		String strResponse = count
+				+ " different movies have been nominated for Best Picture. Wow!";
+
+		return strResponse;
+	}
+	
+	/**
+	 * Interprets best actor count end point
+	 * 
+	 * @return Number of films nominated for Best Actor
+	 */
+	public String bestActorCount() {
+		String count = this.info.getBestActorCount();
+		String strResponse = count
+				+ " different nominations have been handed out for Best Actor. Wow!";
+
+		return strResponse;
+	}
 }

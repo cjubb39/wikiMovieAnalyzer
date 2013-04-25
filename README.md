@@ -40,6 +40,10 @@ Choose question from drop-down menu and enter option 1 and option 2 (if necessar
 8) List all movies that were nominated for Best Picture, Best Director, Best Leading Actor, and 
 			Best Leading Actress along with the number of awards won by each movie.
 		Returns total number of awards won by each movie.
+
+9) How many movies have been nominated for Best Picture (and similar, older awards)?
+
+10)How many different nominations have been handed out for Best Actor?
 		
 
 ##Design Choices

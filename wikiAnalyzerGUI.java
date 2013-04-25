@@ -83,7 +83,9 @@ public class wikiAnalyzerGUI {
 								"<html><center>List all directors (with the corresponding movies) that have been nominated for at least (OPTION1) Best Director awards</center></html>",
 								"<html><center>List the country (with the corresponding movies) that has been nominated the most number of times for Best Foreign Language Film award</center></html>",
 								"<html><center>List all movies nominated for the (OPTION1) award that starred (OPTION2)</center></html>",
-								"<html><center>List all movies that were nominated for Best Picture, Best Director, Best Leading Actor, and Best Leading Actress along with the number of awards won by each movie</center></html>" }));
+								"<html><center>List all movies that were nominated for Best Picture, Best Director, Best Leading Actor, and Best Leading Actress along with the number of awards won by each movie</center></html>",
+								"<html><center>How many movies have been nominated for Best Picture?</center></html>",
+								"<html><center>How many nominations have been handed out for Best Actor?</center></html>"}));
 		GridBagConstraints gbc_comboBox = new GridBagConstraints();
 		gbc_comboBox.fill = GridBagConstraints.BOTH;
 		gbc_comboBox.insets = new Insets(0, 0, 5, 0);
@@ -184,10 +186,13 @@ public class wikiAnalyzerGUI {
 						response = control.quadThreat();
 						break;
 
-					/*
-					 * case 9: response = control.directorAgeThreshold(option1);
-					 * break;
-					 */
+					case 9:
+						response = control.bestPictureCount();
+						break;
+
+					case 10:
+						response = control.bestActorCount();
+						break;
 					}
 
 				} catch (BadArgumentException excep) {

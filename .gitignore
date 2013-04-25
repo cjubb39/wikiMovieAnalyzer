@@ -7,3 +7,5 @@ theory/
 output.txt
 
 *.backup
+
+.fuse*

@@ -373,6 +373,30 @@ public class MovieInterpreter {
 	}
 
 	/**
+	 * Gets count of Best Picture nominees from Parser.
+	 * 
+	 * @return Number of Best Picture nominees
+	 */
+	public String getBestPictureCount() {
+		ArrayList<HashedInfo> allNoms = this.parser.getDecadeTableInfo(
+				"Best_Picture", 0);
+
+		return String.valueOf(allNoms.size());
+	}
+
+	/**
+	 * Gets count of Best Actor nominees from Parser.
+	 * 
+	 * @return Number of Best Acotr nominees
+	 */
+	public String getBestActorCount() {
+		ArrayList<HashedInfo> allNoms = this.parser.getDecadeTableInfo(
+				"Best_Actor", 1);
+
+		return String.valueOf(allNoms.size());
+	}
+	
+	/**
 	 * Returns proper string representation of Best Picture award according at
 	 * input year
 	 * 
