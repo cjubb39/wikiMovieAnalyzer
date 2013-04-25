@@ -13,7 +13,7 @@ import java.util.Iterator;
  */
 public class MovieInterpreter {
 
-	WikipediaParser parser;
+	private WikipediaParser parser;
 
 	/**
 	 * Constructor. Creates association with WikipediaParser class.
@@ -66,11 +66,10 @@ public class MovieInterpreter {
 				"Original_Screenplay", 1);
 		title = title.trim();
 		String tempWriters;
-
 		for (HashedInfo m : allNoms) {
 			HashMap<String, String> tempHash = m.getHasher();
 			if (tempHash.get("Film") != null) {
-				if (tempHash.get("Film").equals(title)) {
+				if (tempHash.get("Film").matches(".*" + title + ".*")) {
 					tempWriters = tempHash.get("Screenwriter(s)");
 					return tempWriters.split(", ");
 				}
